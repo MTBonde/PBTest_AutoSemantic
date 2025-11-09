@@ -166,5 +166,5 @@ Old format no longer compatible.
 - GitHub Release v2.0.0 appears
 
 **Actual result**:
-
+ 
 ---
