@@ -39,6 +39,19 @@ Each commit to this README will test different commit types (feat, fix, docs, et
 
 **Breaking Changes**: Adding `!` after any commit type (e.g., `feat!:`, `fix!:`, `refactor!:`) triggers a MAJOR version bump. Alternatively, include `BREAKING CHANGE:` in the commit body.
 
+A scope is an optional part of a conventional commit that specifies which component, module, or
+area of the codebase the change affects. Only 1 type and 1 scope pr commit.
+
+Format:
+<type>(<scope>): <description>
+
+Examples:
+feat(api): add user authentication endpoint
+fix(database): resolve connection timeout issue
+docs(readme): update installation instructions
+feat(ui): add dark mode toggle
+refactor(auth): simplify token validation logic
+
 ---
 
 ## My Learning Journey
@@ -170,5 +183,40 @@ First attempt (v2.0.0): forgot body section, but feat! still triggered MAJOR bum
 Second attempt (v3.0.0): added "BREAKING CHANGE:" body section, now shows detailed explanation in
 changelog
 Both work, but body section provides better documentation
+
+---
+
+### Step 1.10: Test Scoped Commit
+**Note** step 1.9 was skipped.
+**What I did**: Test scoped commit using `type(scope): description` format
+**Commit**:
+```
+feat(docs): add scope examples to README
+```
+
+**Expected result**:
+- Release created: v3.1.0 (MINOR bump from v3.0.0)
+- CHANGELOG.md groups commits by scope
+- Scope appears in changelog for better organization
+
+**Actual result**:
+
+---
+
+## Next Steps: Phase 2 & 3 Preview
+
+### Phase 2: GitOps Workflow (PBTest_GitOps)
+Implement GitOps-based deployments with automatic version propagation:
+- Docker image builds tagged with semantic versions
+- ArgoCD/Flux for automated deployments to DEV
+- Manual promotion workflows (DEV → STAGING → PROD)
+- Environment-specific configurations
+
+### Phase 3: Infrastructure as Code (PBTest_Infra)
+Terraform-managed infrastructure supporting the GitOps workflow:
+- Kubernetes clusters for each environment (dev/staging/prod)
+- Container registry configuration
+- Networking, security, and access controls
+- Monitoring and logging infrastructure
 
 ---
