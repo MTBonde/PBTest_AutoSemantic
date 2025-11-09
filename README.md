@@ -145,4 +145,26 @@ fix: something was fixed, patch bump expected
 
 **Actual result**:
 worked as planned.
+
+---
+
+### Step 1.8: Test Breaking Change (Major Release)
+**Note** step 1.6 and 1.7 was skipped as i have already seen the planned test 
+**What I did**: Test proper breaking change commit with `feat!:` syntax
+**Commit**:
+```
+feat!: restructure README learning journal format
+
+BREAKING CHANGE: Reorganized step format for better readability.
+Old format no longer compatible.
+```
+
+**Expected result**:
+- Release created: v2.0.0 (MAJOR bump from v1.0.1)
+- CHANGELOG.md shows BREAKING CHANGE section
+- MINOR and PATCH reset to 0
+- GitHub Release v2.0.0 appears
+
+**Actual result**:
+
 ---
