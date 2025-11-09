@@ -92,5 +92,4 @@ git commit -m "feat: add step 1.3 documentation"
 
 **Actual result**:
 
-
 ---
