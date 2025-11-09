@@ -1,3 +1,18 @@
+## 3.1.0 (2025-11-09)
+
+#### Feature
+
+* **docs:** add scope examples to README (eb2085c5)
+
+#### Documentation
+
+* add v2.0.0 and v3.0.0 results with breaking change body comparison (3f423740)
+
+#### Chores
+
+* update CHANGELOG.md for 3.0.0 [skip ci] (d065cdb7)
+
+
 ## 3.0.0 (2025-11-09)
 
 #### Breaking Changes
