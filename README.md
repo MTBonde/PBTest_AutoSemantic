@@ -129,3 +129,20 @@ docs: document allow-initial-development-versions discovery and results
 - CHANGELOG.md is now versioned in repo, not just in GitHub Releases
 
 ---
+
+### Step 1.5: Test PATCH Release (Bug Fix)
+**What I did**: commit a empty Fix to trigger PATCH version bump
+**Commit**:
+```
+fix: something was fixed, patch bump expected
+```
+
+**Expected result**:
+- Release created: v1.0.1 (PATCH bump from v1.0.0)
+- Bug fix triggers PATCH increment
+- CHANGELOG.md updated with fix entry
+- GitHub Release v1.0.1 appears
+
+**Actual result**:
+
+---
