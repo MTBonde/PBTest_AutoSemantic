@@ -91,5 +91,11 @@ git commit -m "feat: add step 1.3 documentation"
 - CHANGELOG.md file created with entry for this feature
 
 **Actual result**:
-
+package was build v0.2.0, which is not what was expected
+What happened:
+- Expectation: first commit using feat: would result in minor bump v0.0.0 -> v0.1.0 therefor a package(first release)
+- Reality: Step 1.1 created v0.1.0, Step 1.3 created v0.2.0
+- Root cause: allow-initial-development-versions: true creates v0.1.0 from ANY commit type for the very first release
+Learned:
+- Next setup i will start with "allow-initial-development-versions: false" so i have manual control of first package and minor bump
 ---
