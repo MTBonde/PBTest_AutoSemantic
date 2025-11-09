@@ -1,3 +1,21 @@
+## 2.0.0 (2025-11-09)
+
+#### Breaking Changes
+
+* major restructure of something to test major bumping and "breaking change:" in changelog.md (921330f9)
+```
+
+```
+
+#### Documentation
+
+* results for 1.5 (bcf1d95b)
+
+#### Chores
+
+* update CHANGELOG.md for 1.0.1 [skip ci] (c5ae8821)
+
+
 ## 1.0.1 (2025-11-09)
 
 #### Bug Fixes
