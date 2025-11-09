@@ -200,6 +200,8 @@ feat(docs): add scope examples to README
 - Scope appears in changelog for better organization
 
 **Actual result**:
+worked as planned. v3.0.0 → v3.1.0 (MINOR bump)
+Scope appears in CHANGELOG.md as **docs:** (bold formatting is subtle but present, must admit the bold is kinda hard to see)
 
 ---
 
