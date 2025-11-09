@@ -166,5 +166,9 @@ Old format no longer compatible.
 - GitHub Release v2.0.0 appears
 
 **Actual result**:
- 
+First attempt (v2.0.0): forgot body section, but feat! still triggered MAJOR bump
+Second attempt (v3.0.0): added "BREAKING CHANGE:" body section, now shows detailed explanation in
+changelog
+Both work, but body section provides better documentation
+
 ---
