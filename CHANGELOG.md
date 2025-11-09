@@ -1,3 +1,18 @@
+## 3.0.0 (2025-11-09)
+
+#### Breaking Changes
+
+* forgot breaking change body section in commit (f5433c91)
+```
+
+BREAKING CHANGE: this will show up in changelog.md
+```
+
+#### Chores
+
+* update CHANGELOG.md for 2.0.0 [skip ci] (49852b20)
+
+
 ## 2.0.0 (2025-11-09)
 
 #### Breaking Changes
