@@ -16,8 +16,28 @@ This README.md file serves as my **learning journal**. As I work through each st
 - The commit message I used
 - Expected vs. actual results
 - What I learned from each step
-
 Each commit to this README will test different commit types (feat, fix, docs, etc.) and demonstrate how semantic versioning works in practice.
+
+
+### Commit Type Reference Conventional commit:
+**Reference**: [Conventional Commits](https://www.conventionalcommits.org/)
+
+| Type       | Description             | Version Bump | Example                            |
+|------------|-------------------------|--------------|------------------------------------|
+| `feat`     | New feature             | MINOR        | `feat: add user login`             |
+| `fix`      | Bug fix                 | PATCH        | `fix: resolve null pointer`        |
+| `docs`     | Documentation only      | None         | `docs: update README`              |
+| `style`    | Code formatting         | None         | `style: fix indentation`           |
+| `refactor` | Code refactoring        | None         | `refactor: extract method`         |
+| `perf`     | Performance improvement | PATCH        | `perf: optimize query`             |
+| `test`     | Test changes            | None         | `test: add unit tests`             |
+| `build`    | Build system changes    | None         | `build: update webpack`            |
+| `ci`       | CI configuration        | None         | `ci: add release workflow`         |
+| `chore`    | Other changes           | None         | `chore: update dependencies`       |
+| `feat!`    | Breaking feature        | MAJOR        | `feat!: change API format`         |
+| `fix!`     | Breaking fix            | MAJOR        | `fix!: remove deprecated endpoint` |
+
+**Breaking Changes**: Adding `!` after any commit type (e.g., `feat!:`, `fix!:`, `refactor!:`) triggers a MAJOR version bump. Alternatively, include `BREAKING CHANGE:` in the commit body.
 
 ---
 
@@ -28,14 +48,29 @@ Each commit to this README will test different commit types (feat, fix, docs, et
 **Commit**:
 ```
 git commit -m "ci: add go-semantic-release workflow"
+git push origin main
 ```
-
 **Expected result**:
 - Workflow runs successfully
 - No release created (ci: commits don't trigger releases)
 - Workflow visible in GitHub Actions tab
+**Actual result**:
+worked as planned, the pipeline said "no release.."
+
+---
+
+### Step 1.2: Configure .gitignore
+**What I did**: Added go-semantic-release cache to .gitignore
+**Commit**:
+```
+git commit -m "chore: add go-semantic-release to gitignore"
+```
+
+**Expected result**:
+- No release created (chore: commits don't trigger releases)
+- Workflow runs successfully
 
 **Actual result**:
-_[To be filled after pushing and checking GitHub Actions]_
+
 
 ---
