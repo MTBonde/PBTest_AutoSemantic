@@ -9,6 +9,7 @@ Repository for learning and testing automatic semantic versioning with go-semant
 - **[PBTest_AutoSemantic](https://github.com/MTBonde/PBTest_AutoSemantic)** (this repo): Learn automatic semantic versioning with go-semantic-release
 - **[PBTest_GitOps](https://github.com/MTBonde/PBTest_GitOps)**: Learn GitOps workflows and environment promotion
 - **[PBTest_Infra](https://github.com/MTBonde/PBTest_Infra)**: Learn Infrastructure as Code with Terraform 
+
 ## How I'm Using This Repository
 
 This README.md file serves as my **learning journal**. As I work through each step, I'll document:
