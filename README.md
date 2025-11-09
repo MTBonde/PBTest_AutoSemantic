@@ -144,5 +144,5 @@ fix: something was fixed, patch bump expected
 - GitHub Release v1.0.1 appears
 
 **Actual result**:
-
+worked as planned.
 ---
