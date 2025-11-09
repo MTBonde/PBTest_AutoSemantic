@@ -71,6 +71,7 @@ git commit -m "chore: add go-semantic-release to gitignore"
 - Workflow runs successfully
 
 **Actual result**:
-
-
+worked as planned.
+OMFG! jetbrains recognized semantic, so auto added this message: "chore: add go-semantic-release cache to .gitignore and update README documentation"
+results will be committed using: "docs: added results"
 ---
