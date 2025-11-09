@@ -23,10 +23,10 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           changelog-file: CHANGELOG.md
-          # Set to false to prevent ANY commit type from triggering first release
-          # With false: only feat:/fix: commits create releases (predictable for learning)
-          # With true: even ci:/chore: can create v0.1.0 (common in production)
-          allow-initial-development-versions: false
+          # Recommended: Start with 0.x.x versions (walking skeleton/pre-release phase)
+          # Note: First commit will create v0.1.0 regardless of type (expected behavior)
+          # This represents your baseline/walking skeleton setup
+          allow-initial-development-versions: true
           prepend: true
 
       - name: Display release information

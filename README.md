@@ -97,5 +97,35 @@ What happened:
 - Reality: Step 1.1 created v0.1.0, Step 1.3 created v0.2.0
 - Root cause: allow-initial-development-versions: true creates v0.1.0 from ANY commit type for the very first release
 Learned:
-- Next setup i will start with "allow-initial-development-versions: false" so i have manual control of first package and minor bump
+- This is actually GOOD - v0.1.0 represents "walking skeleton" (initial setup)
+- Industry standard: React, Vue, Kubernetes all started with 0.x.x versions
+- 0.x.x = pre-release/development phase, 1.0.0 = production-ready
+- The quirk is expected behavior for establishing baseline version
+
+---
+
+### Step 1.4: The v1.0.0 Discovery
+**What I did**: Changed allow-initial-development-versions from true to false, then committed documentation
+**Commits**:
+```
+fix: add CHANGELOG.md auto-commit and set allow-initial to false
+docs: document allow-initial-development-versions discovery and results
+```
+
+**Expected result**:
+- v0.2.0 -> v0.2.1 (PATCH bump from fix:)
+- docs: commit creates no release
+
+**Actual result**:
+- v0.2.0 -> v1.0.0 (MAJOR bump - graduated to production!)
+- Switching from true to false caused project to "graduate" from pre-release (0.x.x) to production-ready (1.x.x)
+- CHANGELOG.md now appears in repo (auto-commit works!)
+
+**What I learned**:
+- Changing allow-initial from true→false triggers v1.0.0 graduation
+- This is semantically correct: leaving 0.x (development) for 1.x (production)
+- For future projects: decide upfront whether to use 0.x.x or 1.x.x
+- Best practice: Start with true (0.x.x) and graduate to 1.0.0 when API stabilizes
+- CHANGELOG.md is now versioned in repo, not just in GitHub Releases
+
 ---
