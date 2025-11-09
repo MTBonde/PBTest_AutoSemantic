@@ -1,0 +1,38 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run semantic release
+        uses: go-semantic-release/action@v1
+        id: semantic_release
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          changelog-file: CHANGELOG.md
+          allow-initial-development-versions: true
+          prepend: true
+
+      - name: Display release information
+        if: steps.semantic_release.outputs.version != ''
+        run: |
+          echo "Version: ${{ steps.semantic_release.outputs.version }}"
+          echo "Changelog: ${{ steps.semantic_release.outputs.changelog }}"
+          echo "Release created successfully!"
+
+      - name: No release needed
+        if: steps.semantic_release.outputs.version == ''
+        run: echo "No release necessary, no relevant commits found."
